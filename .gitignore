@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage
+
+# Transpiled files
+build/
+dist/
+
+# VS Code
+.vscode
+!.vscode/tasks.js
+
+# JetBrains IDEs
+.idea/
+
+# Optional npm cache directory
+.npm
+.routes
+.swagger.json
+# Optional eslint cache
+.eslintcache
+
+# Misc
+.DS_Store
+.*env
+secrets.yaml
+secrets.*.gitignroe
+yarn-error.log
+
+src/server/controllers/routes.ts
+src/server/swagger/
+generated-v1/
+tsconfig.tsbuildinfo
+routes.ts
+swagger.json

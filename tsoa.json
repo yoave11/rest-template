@@ -1,0 +1,21 @@
+{
+  "entryFile": "src/index.ts",
+  "noImplicitAdditionalProperties": "silently-remove-extras",
+  "controllerPathGlobs": ["src/server/controllers/*.ts"],
+  "spec": {
+    "specVersion": 3,
+    "outputDirectory": "./src/server",
+    "entryFile": "./src/server/controllers/index.ts",
+    "yaml": false,
+    "noImplicitAdditionalProperties": "silently-remove-extras",
+    "schemes": ["https"],
+    "description": ""
+  },
+  "ignore": ["/**/*/node_modules/**"],
+  "routes": {
+    "basePath": "/api/v1",
+    "entryFile": "src/server/controllers/index.ts",
+    "routesDir": "src/server/controllers",
+    "middleware": "express"
+  }
+}
