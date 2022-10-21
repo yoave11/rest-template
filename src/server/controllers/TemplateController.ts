@@ -11,11 +11,11 @@ export class TemplateController extends Controller {
   public async getTemplate(
     id: string,
   ): Promise<Template | null> {
-    return Promise.resolve(this.map.get(id) || null);
+    return this.map.get(id) || null;
   }
 
-  @Put('eligibility/experts/ids')
-  public async setExpertEligibilityByIds(
+  @Put()
+  public async setTemplate(
     @Body() body: Template,
   ): Promise<void> {
       this.map.set(body.id, body);

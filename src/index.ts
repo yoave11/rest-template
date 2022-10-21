@@ -1,6 +1,6 @@
 import {httpPort, serviceName} from './framework/environment';
 import app from './server';
-import {handleDisaster, handleGraceful} from '@kavanu/common-setup-utils/src';
+import {handleDisaster, handleGraceful} from './framework/handleEvents';
 
 (async () => {
   handleDisaster();

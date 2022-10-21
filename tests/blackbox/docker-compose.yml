@@ -1,4 +1,12 @@
 version: '3.9'
 services:
-
+  template-api:
+    container_name: '  template-api'
+    image:   template-api
+    build:
+      context: ../../
+    ports:
+      - '6000:6000'
+    env_file:
+      - blackbox.env
 
