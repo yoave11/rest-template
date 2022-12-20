@@ -1,1 +1,4 @@
 docker_compose("./docker-compose.yml")
+docker_build('template-api', context='../..')
+dc_resource('template-api')
+local_resource('tests', cmd='yarn test:blackbox:start', dir='..', resource_deps=['template-api'])

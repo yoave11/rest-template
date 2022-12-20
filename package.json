@@ -8,7 +8,11 @@
   "scripts": {
     "start": "node dist/index.js",
     "start:dev": "yarn ts-node src/index.ts",
-    "test:blackbox:start": "env-cmd -f tests/blackbox/blackbox.env jest --runInBand --forceExit --config tests/blackbox/jest.config.blackbox.js",
+    "test:unit": "jest --config=tests/unit/jest.config.js",
+    "test:blackbox:start": "jest --ci --runInBand --forceExit --config tests/blackbox/jest.config.js",
+    "test:blackbox:teardown": "cd tests/blackbox && tilt down",
+    "test:blackbox:setup": "cd tests/blackbox && tilt up",
+    "test:blackbox:ci": "cd tests/blackbox && tilt ci",
     "build": "yarn generate && tsc -p tsconfig.json",
     "generate": "tsoa spec-and-routes"
   },
