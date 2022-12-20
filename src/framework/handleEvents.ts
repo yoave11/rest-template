@@ -1,8 +1,7 @@
 import delay from 'delay';
 import * as http from 'http';
 import * as stoppable from 'stoppable';
-
-const logger = console;  //TODO: find suitable logger
+import { logger } from "./logger";
 
 export const handleDisaster = () => {
   // @ts-ignore

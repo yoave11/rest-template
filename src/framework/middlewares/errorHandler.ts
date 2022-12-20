@@ -1,6 +1,5 @@
 import {NextFunction, Request, Response} from 'express';
-
-const logger = console;
+import { logger } from "../logger";
 
 export const createErrorHandler = (serviceName: string) => (err: any, req: Request, res: Response, next: NextFunction) => {
   const status = err.status || 500;

@@ -30,7 +30,7 @@
         "node/no-unpublished-import": [
           "error",
           {
-            "allowModules": ["wiremock-rest-client", "@soluto-private/authorized-fetch"]
+            "allowModules": ["wiremock-rest-client"]
           }
         ],
         "prettier/prettier": "error",
@@ -47,8 +47,6 @@
               ["^@?\\w"],
               // Packages with @
               ["^(@)(/.*|$)"],
-              // Internal packages.
-              ["^(@soluto-private|@npmsoluto)(/.*|$)"],
               // Side effect imports.
               ["^\\u0000"],
               // Parent imports. Put `..` last.
