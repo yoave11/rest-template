@@ -1,12 +1,17 @@
 version: '3.9'
 services:
   template-api:
-    container_name: '  template-api'
+    container_name: 'template-api'
     image:   template-api
     build:
       context: ../../
     ports:
-      - '6000:6000'
+      - '3000:3000'
     env_file:
       - blackbox.env
 
+#  redis:
+#    image: redis:4-alpine
+#    container_name: 'redis'
+#    ports:
+#      - '6379:6379'

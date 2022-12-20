@@ -11,6 +11,7 @@ export class TemplateController extends Controller {
   public async getTemplate(
     id: string,
   ): Promise<Template | null> {
+    console.log(`getTemplate: ${id}`);
     return this.map.get(id) || null;
   }
 
@@ -18,6 +19,7 @@ export class TemplateController extends Controller {
   public async setTemplate(
     @Body() body: Template,
   ): Promise<void> {
+
       this.map.set(body.id, body);
   }
 }
